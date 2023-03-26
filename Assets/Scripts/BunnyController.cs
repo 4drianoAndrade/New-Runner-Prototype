@@ -9,6 +9,7 @@ public class BunnyController : MonoBehaviour
 
     // Control variables
     private bool isGrounded;
+    private bool isPunctuated;
 
     private void Awake()
     {
@@ -33,7 +34,31 @@ public class BunnyController : MonoBehaviour
 
         if (Input.GetButtonDown("Jump") && isGrounded == true)
         {
-            rb2DBunnyComponent.AddForce(new Vector2(0f, _GameController.jumpForceBunny * Time.fixedDeltaTime), ForceMode2D.Force);
+            rb2DBunnyComponent.AddForce(new Vector2(0f, _GameController.jumpForceBunny));
+        }
+    }
+
+    private void LateUpdate()
+    {
+        if (isPunctuated == true)
+        {
+            _GameController.ToScore(1);
+            isPunctuated = false;
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        switch (collision.gameObject.tag)
+        {
+            case "Collectable":
+                isPunctuated = true;
+                Destroy(collision.gameObject);
+                break;
+
+            case "Obstacle":
+                _GameController.ChangeScene("GameOver");
+                break;
         }
     }
 }

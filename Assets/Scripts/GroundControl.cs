@@ -5,7 +5,6 @@ using UnityEngine;
 public class GroundControl : MonoBehaviour
 {
     private GameController _GameController;
-
     private Rigidbody2D rb2DBridgeComponent;
 
     // Control variables
@@ -14,7 +13,6 @@ public class GroundControl : MonoBehaviour
     private void Awake()
     {
         _GameController = FindObjectOfType<GameController>();
-
         rb2DBridgeComponent = GetComponent<Rigidbody2D>();
     }
 

@@ -25,11 +25,11 @@ public class GameController : MonoBehaviour
 
     [Header("GAME SCORE")]
     public int gameScore;
-    public Text scoreTxt;
+    //public Text scoreTxt;
 
-    [Header("FX SOUND")]
-    public AudioSource fxAudioSource;
-    public AudioClip scoreSoundEffect;
+    //[Header("FX SOUND")]
+    //public AudioSource fxAudioSource;
+    //public AudioClip scoreSoundEffect;
 
 
     private void Awake()
@@ -58,8 +58,8 @@ public class GameController : MonoBehaviour
     public void ToScore(int amountOfPoints)
     {
         gameScore += amountOfPoints;
-        scoreTxt.text = "Score: " + gameScore.ToString();
-        fxAudioSource.PlayOneShot(scoreSoundEffect);
+        //scoreTxt.text = "Score: " + gameScore.ToString();
+        //fxAudioSource.PlayOneShot(scoreSoundEffect);
     }
 
     public void ChangeScene(string destinationScene)
