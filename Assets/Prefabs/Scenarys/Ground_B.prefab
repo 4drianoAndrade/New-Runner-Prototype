@@ -421,7 +421,7 @@ GameObject:
   - component: {fileID: 4351265150136507274}
   - component: {fileID: 8112357474441374295}
   - component: {fileID: 3293373255666639534}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: GrassFloor (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -483,7 +483,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: -5721249382615705026, guid: d6d66c61fb386ad488e2b093185d2360, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -812,7 +812,7 @@ GameObject:
   - component: {fileID: 2378199845511564816}
   - component: {fileID: 3735712279204769390}
   - component: {fileID: 906243478496575657}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Ground_B
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1126,7 +1126,7 @@ GameObject:
   - component: {fileID: 4980758378938967230}
   - component: {fileID: 4703169293963152960}
   - component: {fileID: 6764164877940917953}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: GrassFloor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1189,7 +1189,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: -5721249382615705026, guid: d6d66c61fb386ad488e2b093185d2360, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

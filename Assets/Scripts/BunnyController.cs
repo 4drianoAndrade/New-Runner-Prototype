@@ -5,15 +5,14 @@ using UnityEngine;
 public class BunnyController : MonoBehaviour
 {
     private GameController _GameController;
-
     private Rigidbody2D rb2DBunnyComponent;
 
-
+    // Control variables
+    private bool isGrounded;
 
     private void Awake()
     {
         _GameController = FindAnyObjectByType<GameController>();
-
         rb2DBunnyComponent = GetComponent<Rigidbody2D>();
     }
 
@@ -30,14 +29,11 @@ public class BunnyController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        JumpBunny();
-    }
+        isGrounded = Physics2D.OverlapCircle(_GameController.checkGroundTransform.position, _GameController.groundCheckRadiusSize, _GameController.groundJumpLayer);
 
-    private void JumpBunny()
-    {
-        if (Input.GetButtonDown("Jump"))
+        if (Input.GetButtonDown("Jump") && isGrounded == true)
         {
-            rb2DBunnyComponent.AddForce(new Vector2(0f, _GameController.jumpForceBunny));
+            rb2DBunnyComponent.AddForce(new Vector2(0f, _GameController.jumpForceBunny * Time.fixedDeltaTime), ForceMode2D.Force);
         }
     }
 }

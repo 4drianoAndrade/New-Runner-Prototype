@@ -503,7 +503,7 @@ GameObject:
   - component: {fileID: 8967924225703534804}
   - component: {fileID: 8659930907083934250}
   - component: {fileID: 5031310103089160753}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: GrassFloor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -698,7 +698,7 @@ GameObject:
   - component: {fileID: -7182387809910760179}
   - component: {fileID: 3901616281936799237}
   - component: {fileID: 7533268747702375186}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Ground_A
   m_TagString: Untagged
   m_Icon: {fileID: 0}

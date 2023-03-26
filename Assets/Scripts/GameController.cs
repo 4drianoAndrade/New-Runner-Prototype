@@ -10,6 +10,9 @@ public class GameController : MonoBehaviour
 
     [Header("PLAYER BUNNY SETTINGS")]
     public float jumpForceBunny;
+    public Transform checkGroundTransform;
+    public float groundCheckRadiusSize;
+    public LayerMask groundJumpLayer;
 
     [Header("BRIDGE SETTINGS")]
     public float groundSpeedMovement;
@@ -62,5 +65,10 @@ public class GameController : MonoBehaviour
     public void ChangeScene(string destinationScene)
     {
         SceneManager.LoadScene(destinationScene);
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.DrawWireSphere(checkGroundTransform.position, groundCheckRadiusSize);
     }
 }
